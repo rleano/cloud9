@@ -72,8 +72,11 @@ module.exports = function setup(options, imports, register) {
                         if (!msg)
                             return;
 
-                        if (!res.headerSent)
-                            res.writeHead(200, { "content-type": "text/plain" });
+                        if (!res.headerSent){
+                            //CROWD9: @ADD START
+                            //res.writeHead(200, { "content-type": "text/plain" });
+                            //CROWD9: @ADD END
+                        }
                         res.write(msg);
                     },
                     // process exit

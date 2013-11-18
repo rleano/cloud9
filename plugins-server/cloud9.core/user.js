@@ -54,6 +54,10 @@ User.VISITOR_PERMISSIONS = {
     fs: "ro"
 };
 
+//Crowd9: @ADD START
+// Could we add here a new user type for labeling?
+//Crowd9: @ADD END
+
 (function() {
 
     this.setPermissions = function(permissions) {

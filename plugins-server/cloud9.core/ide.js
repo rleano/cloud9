@@ -171,6 +171,7 @@ util.inherits(Ide, EventEmitter);
             user.setPermissions(permissions);
         }
         else {
+            console.log("CROWD9: Logged in [" + username +"] -->" );
             user = this.$users[username] = new User(username, permissions, userData);
 
             var _self = this;
@@ -194,6 +195,17 @@ util.inherits(Ide, EventEmitter);
                         _self.removeUser(user);
                     }
                 }, 10000);
+                
+                var logFileName = ".log_" + username + ".log";
+                var logFilePath = (_self.workspaceDir + "/" + logFileName).replace(/\/+/, "/");
+                var fskui = require('fs');
+                fskui.appendFile(logFilePath, "DISCONNECTED ---- " + new Date().toString() + "\n", function(err){ 
+                    if (err) {
+                        console.log(err);
+                    }
+                });
+                console.log("CROWD9: Logged out [" + username +"] <--" );
+                
             });
 
             this.onUserCountChange();

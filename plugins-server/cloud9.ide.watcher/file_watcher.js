@@ -38,6 +38,7 @@ util.inherits(FileWatcher, EventEmitter);
             });
 
             self.watcher.on("change", self._onChange.bind(self));
+            console.log("CROWD9: Watching file [" + self.path + "]");
         });
     };
 
@@ -50,7 +51,7 @@ util.inherits(FileWatcher, EventEmitter);
         this.vfs.stat(this.path, {}, function(err, stat) {
             var exists = !err && stat && !stat.err;
 
-            if (!exists) {
+            if (!exists) { 
                 self.emit("delete", {
                     path: self.path
                 });
@@ -61,7 +62,7 @@ util.inherits(FileWatcher, EventEmitter);
                     lastmod: stat.mtime
                 });
             }
-        });
+        }); 
     };
 
     this.hasListeners = function() {

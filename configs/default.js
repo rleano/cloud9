@@ -150,6 +150,11 @@ var config = [
             "ext/revisions/revisions",
             "ext/language/liveinspect",
             "ext/splitview/splitview"
+            //Crowd9: @ADD START
+            ,
+            "ext/unl_keygen/unl_keygen",
+            "ext/unl_logger/unl_logger"
+            //Crowd9: @ADD END
         ]
     }, {
         packagePath: "vfs-architect/local",
@@ -172,7 +177,10 @@ var config = [
         secret: "v1234"
     },
     {
+        //CROWD9: @ADD START
         packagePath: "./connect.session.file",
+        //packagePath: "./connect.session.memory",
+        //CROWD9: @ADD END
         sessionsPath: __dirname + "/../.sessions",
         maxAge: 7 * 24 * 60 * 60 * 1000
     },
