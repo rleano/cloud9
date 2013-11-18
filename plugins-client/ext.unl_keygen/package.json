@@ -1,0 +1,12 @@
+{
+    "name"      :       "ext.unl_keygen",
+    "dev"       :       "rleano",
+    "version"   :       "0.0.1",
+    "main"      :       "unl_keygen-ext.js",
+    "private"   :       true,
+    "plugin"    : 
+        {
+            "provides"  : [ "ext.unl_keygen" ],
+            "consumes"  : [ "client-plugins" ]
+        }
+}
