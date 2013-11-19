@@ -152,8 +152,8 @@ var config = [
             "ext/splitview/splitview"
             //Crowd9: @ADD START
             ,
-            "ext/unl_keygen/unl_keygen",
-            "ext/unl_logger/unl_logger"
+            "ext/unl_keygen/unl_keygen"
+            //"ext/unl_logger/unl_logger"
             //Crowd9: @ADD END
         ]
     }, {
